@@ -14,7 +14,7 @@ import java.sql.DriverManager;
  */
 public class DBContext {
 
-    private final String severName = "DESKTOP-KMNS09Q";
+    private final String severName = "DESKTOP-40HU56S";
     private final String dbName = "AmericanOrder";
     private final String portNumbber = "1433";
     private final String instance = "";

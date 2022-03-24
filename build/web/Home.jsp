@@ -20,7 +20,8 @@
         <c:if test="${LIST_PRODUCT_CATEGORY!=null}">
             <c:set var="LIST_PRODUCT" value="${LIST_PRODUCT_CATEGORY}"/>
         </c:if>
-        <jsp:include page="Menu.jsp"></jsp:include>
+      <jsp:include page="Menu.jsp"></jsp:include>
+      <jsp:include page="Slide.jsp"></jsp:include>
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -43,18 +44,17 @@
                         <c:forEach items="${LIST_PRODUCT}" var="crr">
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="card">
-                                    <img class="card-img-top" src="${crr.img}" alt="Card image cap">
+                                    <img class="card-img-top" src="${crr.img}"alt="Card image cap">
                                     <div class="card-body">
-                                        <h4 class="card-title show_txt"><a href="ProductDetail?pId=${crr.pId}" title="View Product">${crr.name}</a></h4>
-                                        <p class="card-text show_txt">${crr.desc}
+                                        <h4 class="card-title show_txt"><a href="ProductDetail?pId=${crr.pId}" title="View Product" style="font-size: 20px">${crr.name}</a></h4>
+                                        <p class="card-text show_txt" style="color:red; font-size: 30px ">${crr.price}$
                                         </p>
                                         <div class="row">
+                                            
                                             <div class="col">
-                                                <p class="btn btn-danger btn-block">${crr.price} $</p>
+                                                <a href="AddToCard?pId=${crr.pId}" class="btn btn-success btn-block">Add To Cart</a>
                                             </div>
-                                            <div class="col">
-                                                <a href="AddToCard?pId=${crr.pId}" class="btn btn-success btn-block">Add to cart</a>
-                                            </div>
+                                             
                                         </div>
                                     </div>
                                 </div>
@@ -64,6 +64,15 @@
                 </div>
 
             </div>
+                <style> 
+                .card-img-top {
+                     -webkit-transition: all 1s ease;
+                        -moz-transition: all 1s ease;
+                        -ms-transition: all 1s ease;
+                        transition: all 0.5s ease;
+                }
+                .card-img-top:hover{transform: scale(1.5);}
+                </style>
         </div>
 
         <jsp:include page="Footer.jsp"></jsp:include>

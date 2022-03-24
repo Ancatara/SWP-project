@@ -1,8 +1,4 @@
-<%-- 
-    Document   : Cart
-    Created on : Oct 31, 2020, 9:42:21 PM
-    Author     : trinh
---%>
+
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ tagliburi="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
@@ -13,7 +9,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+        <link href="css/styleplus.css" rel="stylesheet" type="text/css"/>
     </head>
 
     <body>
@@ -99,7 +95,19 @@
                                         <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tổng thanh toán</strong>
                                             <h5 class="font-weight-bold">${fn:substring(TOTAL*1.1,0,fn:indexOf(TOTAL*1.1, '.')+3)} $</h5>
                                         </li>
-                                    </ul><a href="SaveOrder" class="btn btn-dark rounded-pill py-2 btn-block">Order now</a>
+                                    </ul>
+                                        
+                                        <div class="btn__Ordercart">
+                                            <a class="btn-order" onclick="openPopup()" style="color: #fff">Order now</a>
+<!--                                            <button href="SaveOrder" class="btn" onclick="openPopup()">Order Now</button>-->
+                                            <div class="popup" id="popup">
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flat_tick_icon.svg/768px-Flat_tick_icon.svg.png" >
+                                                <h2>Thank You !</h2>
+                                                <p>Your Order has been successfully!</p>
+<!--                                                <button type="button" onclick="closePopup()" href="SaveOrder">OK</button>-->
+                                                <a type="button" onclick="closePopup()" href="SaveOrder">OK</a>
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -111,7 +119,18 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
     </body>
+    <script>  
+            var popup = document.getElementById('popup')
+
+            function openPopup(){
+                popup.classList.add('open-popup')
+            }
+            function closePopup(){
+                popup.classList.remove('open-popup')
+            }
+                </script>
 
 </html>
 </html>

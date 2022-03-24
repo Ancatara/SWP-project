@@ -45,10 +45,12 @@
         </div>
     </div>
 </nav>
-<section class="jumbotron text-center">
+                        
+
+<!--<section class="jumbotron text-center">
     <div class="container">
         <h1 class="jumbotron-heading">Order đồ Mỹ từ Việt Nam</h1>
         <p class="lead text-muted mb-0">Uy tín tạo nên thương hiệu với hơn 10 năm cung cấp các sản phầm order từ Mỹ nhưng nhập từ Trung Quốc</p>
     </div>
-</section>
-<!--end of menu-->
+</section>-->
+

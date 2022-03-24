@@ -23,7 +23,9 @@
                 <input name="user"  type="text" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus="">
                 <input name="pass"  type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
                 <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
-                <font color="red">${ERR}</font>
+<!--                <font> color="red">${ERR}</font>-->
+                
+                
                 <hr>
                
             </form>
