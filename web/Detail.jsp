@@ -41,6 +41,11 @@
                 width: 100% !important;
                 height: auto !important;
             }
+            .container{
+                margin-top: 20px;
+                margin-bottom: 20px
+            }
+           
         </style>
     </head>
     <body>
@@ -95,8 +100,7 @@
 
                                         </div> <!-- row.// -->
                                         <hr>
-                                        <a href="#" class="btn btn-lg btn-primary text-uppercase"> Buy now </a>
-                                        <a href="#" class="btn btn-lg btn-outline-primary text-uppercase"> <i class="fas fa-shopping-cart"></i> Add to cart </a>
+                                        <a href="AddToCard?pId=${crr.pId}" class="btn btn-success btn-block">Add To Cart</a>
                                     </article> <!-- card-body.// -->
                                 </aside> <!-- col.// -->
                             </div> <!-- row.// -->
@@ -107,6 +111,6 @@
                 </div>
             </div>
         </div>
-        <jsp:include page="Footer.jsp"></jsp:include>
+        
     </body>
 </html>
