@@ -46,7 +46,7 @@
                                 <div class="card">
                                     <img class="card-img-top" src="${crr.img}"alt="Card image cap">
                                     <div class="card-body">
-                                        <h4 class="card-title show_txt"><a href="ProductDetail?pId=${crr.pId}" title="View Product" style="font-size: 20px">${crr.name}</a></h4>
+                                        <h4 class="card-title show_txt"><a href="DetailProduct?pId=${crr.pId}" title="View Product" style="font-size: 20px">${crr.name}</a></h4>
                                         <p class="card-text show_txt" style="color:red; font-size: 30px ">${crr.price}$
                                         </p>
                                         <div class="row">

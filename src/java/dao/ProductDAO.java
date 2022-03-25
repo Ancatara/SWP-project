@@ -171,6 +171,27 @@ public class ProductDAO {
         }
         return false;
     }
+    public Product getProductById(String id) {
+        String sql = "select * from Product where pId=?";
+        try {
+            DBContext db = new DBContext();
+            con = db.getConnection();
+            ps = con.prepareStatement(sql);
+            ps.setString(1, id);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return (new Product(rs.getString(1), 
+                        rs.getString(2), 
+                        rs.getString(3), 
+                        rs.getInt(4), 
+                        rs.getString(5), 
+                        rs.getString(6)));
+            }
+        } catch (Exception ex) {
+        }
+        return null;
+    }
+
 
     public Product getProduct(String id) {
         ArrayList<Product> result = new ArrayList<>();
